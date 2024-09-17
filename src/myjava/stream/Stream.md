@@ -15,3 +15,7 @@ What is Stream?
 You are not allowed to operate a stream twice!
 
 ### Flat Mapping
+
+TODO: learn Collectors
+
+## Reduce Data
