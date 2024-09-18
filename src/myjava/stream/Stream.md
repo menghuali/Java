@@ -19,3 +19,6 @@ You are not allowed to operate a stream twice!
 TODO: learn Collectors
 
 ## Reduce Data
+
+## Histograms
+Groupby collector and downstream collector
