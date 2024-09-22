@@ -4,8 +4,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Scanner;
 
-import javax.xml.crypto.NoSuchMechanismException;
-
 public class Main {
     private static Object[] processors = new Object[] { new Adder(), new Subtracter(), new Multiplier(),
             new Divider(), new PowerOf() };
@@ -21,6 +19,7 @@ public class Main {
         double rightVal = valueFromWord(parts[2]);
 
         process(keyword, leftVal, rightVal);
+        scanner.close();
     }
 
     private static void process(String keyword, double leftVal, double rightVal) {
