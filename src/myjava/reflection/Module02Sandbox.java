@@ -1,4 +1,4 @@
-package myjava.reflection.module02;
+package myjava.reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 import myjava.reflection.model.Person;
 
-public class Sandbox {
+public class Module02Sandbox {
 
     public static void main(String[] args)
             throws ClassNotFoundException, NoSuchFieldException, SecurityException, NoSuchMethodException {

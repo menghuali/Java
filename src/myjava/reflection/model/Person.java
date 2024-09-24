@@ -5,10 +5,10 @@ import myjava.reflection.annotation.PrimaryKey;
 
 public class Person {
 
-	@PrimaryKey
+	@PrimaryKey(name = "ID")
 	private long id;
 
-	@Column
+	@Column(name = "NAME")
 	private String name;
 
 	@Column
