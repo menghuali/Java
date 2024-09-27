@@ -3,16 +3,16 @@ package myjava.reflection.orm;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.concurrent.atomic.AtomicLong;
 
+import myjava.reflection.annotation.Inject;
 import myjava.reflection.util.ColumnField;
 import myjava.reflection.util.MetaModel;
 
-public class EntityMangerImpl<T> implements EntityManger<T> {
+public class ManagedEntityManger<T> implements EntityManger<T> {
 
     private Class<T> clss;
 
@@ -20,10 +20,21 @@ public class EntityMangerImpl<T> implements EntityManger<T> {
 
     private AtomicLong idGen;
 
-    public EntityMangerImpl(Class<T> clss) {
+    @Inject
+    private Connection connection;
+
+    public ManagedEntityManger() {
+    }
+
+    public ManagedEntityManger(Class<T> clss) {
         this.clss = clss;
         mm = MetaModel.of(clss);
         idGen = new AtomicLong();
+    }
+
+    public void setEntityClass(Class<T> clss) {
+        this.clss = clss;
+        mm = MetaModel.of(clss);
     }
 
     @Override
@@ -37,8 +48,7 @@ public class EntityMangerImpl<T> implements EntityManger<T> {
     }
 
     private PreparedStatementWrapper preparedStatementWith(String sql) throws SQLException {
-        Connection conn = DriverManager.getConnection("jdbc:h2:./data/h2/java_reflection", "sa", "");
-        PreparedStatement statement = conn.prepareStatement(sql);
+        PreparedStatement statement = connection.prepareStatement(sql);
         return new PreparedStatementWrapper(statement);
     }
 

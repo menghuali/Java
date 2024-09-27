@@ -1,12 +1,13 @@
 package myjava.reflection;
 
+import myjava.reflection.beanmgt.BeanManager;
 import myjava.reflection.model.Person;
-import myjava.reflection.orm.EntityManger;
+import myjava.reflection.orm.ManagedEntityManger;
 
 public class ReadingObjects {
 
     public static void main(String[] args) {
-        EntityManger<Person> em = EntityManger.of(Person.class);
+        ManagedEntityManger<?> em = BeanManager.getInstance().getBean(ManagedEntityManger.class, Person.class);
 
         System.out.println(em.find(1L));
         System.out.println(em.find(2L));

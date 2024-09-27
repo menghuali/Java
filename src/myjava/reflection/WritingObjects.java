@@ -1,12 +1,13 @@
 package myjava.reflection;
 
+import myjava.reflection.beanmgt.BeanManager;
 import myjava.reflection.model.Person;
 import myjava.reflection.orm.EntityManger;
 
 public class WritingObjects {
 
     public static void main(String[] args) {
-        EntityManger<Person> em = EntityManger.of(Person.class);
+        EntityManger<Person> em = BeanManager.getInstance().getEntityManager(Person.class);
 
         Person linda = new Person("Linda", 31);
         Person james = new Person("James", 24);
