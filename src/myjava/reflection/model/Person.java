@@ -27,6 +27,7 @@ public class Person {
 	}
 
 	public String getName() {
+		System.out.println("Invoke getName()");
 		return name;
 	}
 

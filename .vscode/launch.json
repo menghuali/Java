@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MethodHandleSandbox",
+            "request": "launch",
+            "mainClass": "myjava.reflection.methodhandle.MethodHandleSandbox",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
             "name": "ReadingObjects",
             "request": "launch",
             "mainClass": "myjava.reflection.ReadingObjects",
