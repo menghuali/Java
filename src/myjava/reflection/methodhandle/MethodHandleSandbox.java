@@ -3,6 +3,7 @@ package myjava.reflection.methodhandle;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
+import java.lang.invoke.VarHandle;
 import java.lang.invoke.MethodHandles.Lookup;
 
 import myjava.reflection.model.Person;
@@ -36,9 +37,15 @@ public class MethodHandleSandbox {
 
         // Access fields
         Lookup privateLookup = MethodHandles.privateLookupIn(Person.class, lookup);
-        nameGetter = privateLookup.findGetter(Person.class, "name", String.class);
-        name = (String) nameGetter.invoke(p);
+        MethodHandle nameField = privateLookup.findGetter(Person.class, "name", String.class);
+        name = (String) nameField.invoke(p);
         System.out.println(name);
+
+        // Volatile
+        VarHandle ageField = privateLookup.findVarHandle(Person.class, "age", int.class);
+        System.out.println(ageField.get(p));
+        System.out.println(ageField.getAndAdd(p, 1));
+        System.out.println(p);
     }
 
 }
