@@ -53,20 +53,27 @@ public class GroupBySample {
         System.out.println(citiesPerState);
 
         // Count cities by state
-        System.out.println(cities.stream().collect(Collectors.groupingBy(city -> city.state, Collectors.counting())));
+        System.out.println(
+                cities.stream().collect(Collectors.groupingBy(city -> city.state, Collectors.counting())));
         // Get the state with max citites
-        System.out.println(cities.stream().collect(Collectors.groupingBy(city -> city.state, Collectors.counting()))
-                .entrySet().stream().max((a, b) -> Long.compare(a.getValue(), b.getValue())).orElseThrow());
-        System.out.println(cities.stream().collect(Collectors.groupingBy(city -> city.state, Collectors.counting()))
-                .entrySet().stream().max(Comparator.comparing(Entry::getValue)).orElseThrow());
-        System.out.println(cities.stream().collect(Collectors.groupingBy(city -> city.state, Collectors.counting()))
-                .entrySet().stream().max(Entry.comparingByValue()).orElseThrow());
+        System.out.println(
+                cities.stream().collect(Collectors.groupingBy(city -> city.state, Collectors.counting()))
+                        .entrySet().stream().max((a, b) -> Long.compare(a.getValue(), b.getValue())).orElseThrow());
+        // Use comparator to compare elements
+        System.out.println(
+                cities.stream().collect(Collectors.groupingBy(city -> city.state, Collectors.counting()))
+                        .entrySet().stream().max(Comparator.comparing(Entry::getValue)).orElseThrow());
+        // Use Entry.comparingByValue(), a comparator, to compare elements
+        System.out.println(
+                cities.stream().collect(Collectors.groupingBy(city -> city.state, Collectors.counting()))
+                        .entrySet().stream().max(Entry.comparingByValue()).orElseThrow());
 
         // Sum the state population by state
         System.out.println(cities.stream().collect(
                 Collectors.groupingBy(city -> city.state, Collectors.summingInt(city -> city.population))));
         System.out.println(cities.stream().collect(
                 Collectors.groupingBy(city -> city.state, Collectors.summarizingInt(city -> city.population))));
+
         // Get the state with max population
         System.out.println(cities.stream().collect(
                 Collectors.groupingBy(city -> city.state, Collectors.summingInt(city -> city.population))).entrySet()

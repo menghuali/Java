@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GroupBySample",
+            "request": "launch",
+            "mainClass": "myjava.stream.GroupBySample",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "SimpleReduce",
+            "request": "launch",
+            "mainClass": "myjava.stream.SimpleReduce",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "DropWhileTakeWhile",
+            "request": "launch",
+            "mainClass": "myjava.stream.DropWhileTakeWhile",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "SkipAndLimit",
+            "request": "launch",
+            "mainClass": "myjava.stream.SkipAndLimit",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "FlatMap",
+            "request": "launch",
+            "mainClass": "myjava.stream.FlatMap",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "StreamFromSystemIn",
+            "request": "launch",
+            "mainClass": "myjava.stream.StreamFromSystemIn",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
             "name": "MethodHandleSandbox",
             "request": "launch",
             "mainClass": "myjava.reflection.methodhandle.MethodHandleSandbox",
