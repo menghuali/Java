@@ -85,4 +85,3 @@ List<? extends Object> lo = ls;
 
 ## Reference
 [Oracle Generics Tutorial](https://docs.oracle.com/javase/tutorial/extra/generics/index.html)
-

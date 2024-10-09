@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Sandbox",
+            "request": "launch",
+            "mainClass": "myjava.reflection.Sandbox",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
             "name": "GroupBySample",
             "request": "launch",
             "mainClass": "myjava.stream.GroupBySample",
