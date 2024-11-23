@@ -6,6 +6,83 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CallableAndFuture",
+            "request": "launch",
+            "mainClass": "myjava.concurrent_pattern.m02.CallableAndFuture",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "ExecutorAndRunnable",
+            "request": "launch",
+            "mainClass": "myjava.concurrent_pattern.m02.ExecutorAndRunnable",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "SingletonDemo",
+            "request": "launch",
+            "mainClass": "myjava.concurrency.m04.SingletonDemo",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "RaceCondition",
+            "request": "launch",
+            "mainClass": "myjava.concurrency.m04.RaceCondition",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "RunningA",
+            "request": "launch",
+            "mainClass": "myjava.concurrency.m04.RunningA",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "Worker",
+            "request": "launch",
+            "mainClass": "myjava.concurrency.m04.Worker",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "FalseSharing",
+            "request": "launch",
+            "mainClass": "myjava.concurrency.m03.FalseSharing",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "ProducerConsumerDemo",
+            "request": "launch",
+            "mainClass": "myjava.concurrency.m02.ProducerConsumerDemo",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "DeadLock",
+            "request": "launch",
+            "mainClass": "myjava.concurrency.DeadLock",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "RaceCondition",
+            "request": "launch",
+            "mainClass": "myjava.concurrency.RaceCondition",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "Sandbox02",
+            "request": "launch",
+            "mainClass": "myjava.concurrency.Sandbox02",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
             "name": "Sandbox",
             "request": "launch",
             "mainClass": "myjava.reflection.Sandbox",
