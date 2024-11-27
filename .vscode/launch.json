@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CountdownLatchInAction",
+            "request": "launch",
+            "mainClass": "myjava.concurrent_pattern.m04.CountdownLatchInAction",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "BarrierInAction",
+            "request": "launch",
+            "mainClass": "myjava.concurrent_pattern.m04.BarrierInAction",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "CacheWithRWLock",
+            "request": "launch",
+            "mainClass": "myjava.concurrent_pattern.m03.CacheWithRWLock",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
+            "name": "ProducerConsumerWithLocks",
+            "request": "launch",
+            "mainClass": "myjava.concurrent_pattern.m03.ProducerConsumerWithLocks",
+            "projectName": "Java_495b342a"
+        },
+        {
+            "type": "java",
             "name": "CallableAndFuture",
             "request": "launch",
             "mainClass": "myjava.concurrent_pattern.m02.CallableAndFuture",
